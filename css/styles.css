@@ -752,11 +752,11 @@ body {
 
 .modal-input:focus,
 .modal-comment:focus {
-border: 1px solid #4D5AE5;
+  border: 1px solid #4d5ae5;
 }
 
 .modal-input:focus + .input-icon {
-  fill: #4D5AE5;
+  fill: #4d5ae5;
 }
 
 .modal-btn {
@@ -779,10 +779,10 @@ border: 1px solid #4D5AE5;
   transition-timing-function: var(--timing);
 }
 
-.modal-btn:hover, 
+.modal-btn:hover,
 .modal-btn:focus {
-background-color: #404BBF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .modal-comment {
@@ -854,13 +854,33 @@ background-color: #31d0aa;
 .check-text {
   display: flex;
   align-items: center;
-  gap:5px;
+  gap: 5px;
   margin-bottom: 24px;
 }
 
-.check-text::before{
+.check-text span {
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #000000;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition-property: background-color, border, fill;
+  transition-duration: var(--dur);
+  transition-timing-function: var(--timing);
+}
+
+.input-check:checked + .check-text span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+/* .check-text::before{
   content: '';
-  display: block;
   width: 16px;
   height: 16px;
   border: 1.25px solid #000000;
@@ -873,4 +893,4 @@ border-radius: 2px;
   background-image: url(../images/check-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
